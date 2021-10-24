@@ -1,4 +1,4 @@
-package io.nutrify.supplement;
+package io.info.student;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

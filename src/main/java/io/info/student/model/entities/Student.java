@@ -1,4 +1,4 @@
-package io.nutrify.supplement.model.entities;
+package io.info.student.model.entities;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
