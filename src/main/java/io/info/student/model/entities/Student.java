@@ -13,6 +13,6 @@ public class Student{
     @Id
     private String id;
     private String name;
-    private String address;
-    private Integer standard;
+    private String email;
+    private String password;
 }

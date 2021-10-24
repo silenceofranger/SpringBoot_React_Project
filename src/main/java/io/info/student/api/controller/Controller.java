@@ -8,10 +8,8 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-
 import io.info.student.api.repositories.StudentRepository;
 import io.info.student.model.entities.Student;
-
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,8 +27,8 @@ public class Controller {
         return studentRepository.findAll();
     }
     @PostMapping("/")
-    public Student SaveProduct(@RequestBody Student product) {
-        return studentRepository.save(product);
+    public Student saveStudent(@RequestBody Student student) {
+        return studentRepository.save(student);
     }
     @GetMapping("/{id}")
     public Student GetUser(@PathVariable String id) {
@@ -40,8 +38,8 @@ public class Controller {
     public Student PutMapping(@RequestBody Student newStudent) {
         Student oldStudent = studentRepository.findById(newStudent.getId()).orElse(null);
         oldStudent.setName(newStudent.getName());
-        oldStudent.setAddress(newStudent.getAddress());
-        oldStudent.setStandard(newStudent.getStandard());
+        oldStudent.setEmail(newStudent.getEmail());
+        oldStudent.setPassword(newStudent.getPassword());
         studentRepository.save(oldStudent);
         return oldStudent;
     }
